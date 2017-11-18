@@ -11,7 +11,7 @@ class Source {
     private double timeToGenerate;
 
     Source(double lambda) {
-        random = new Random();
+        random = new Random(9264);
         this.lambda = lambda;
         calculateTimeLeft();
     }

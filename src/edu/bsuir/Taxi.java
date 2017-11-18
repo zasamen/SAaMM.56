@@ -1,7 +1,5 @@
 package edu.bsuir;
 
-import java.util.Arrays;
-
 import static java.lang.Math.abs;
 import static java.lang.Math.min;
 
@@ -119,13 +117,10 @@ class Taxi {
     }
 
     void printStats() {
-        System.out.println(Arrays.stream(stateList).sum()/ticks);
-        System.out.println("Car total count : " + carCount);
-        System.out.println("Person total count : " + personCount);
-        System.out.println("P state Probability " + stateList[n]/ticks);
-        System.out.println("Car queue average " + carQueueLength/ticks);
-        System.out.println("Person queue average " + personQueueLength/ticks);
-        System.out.println("Car queue average time " + carQueueTime/carCount);
-        System.out.println("Person queue average time " + personQueueTime/personCount);
+        System.out.println("p = " + stateList[n]/ticks);
+        System.out.println("Loc " + carQueueLength/ticks);
+        System.out.println("Lop " + personQueueLength/ticks);
+        System.out.println("Woc " + carQueueTime/carCount);
+        System.out.println("Wop " + personQueueTime/personCount);
     }
 }
